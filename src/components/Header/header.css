@@ -1,0 +1,25 @@
+.header {
+  background: #fff;
+}
+.header__container {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__container .logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.header__container .logo img {
+  width: 70px;
+  height: auto;
+  margin-right: 10px;
+}
