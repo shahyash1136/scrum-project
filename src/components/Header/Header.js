@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./header.css";
 import config from "../../common/config";
 import Button from "../Button/button";
+import Popup from "../Popup";
 
 const Header = () => {
-  const buttonHandler = (e) => {
+  const [togglePopup, setTogglePopup] = useState(false);
+  const popupHandler = (e) => {
     e.preventDefault();
-    console.log("New Task");
+    setTogglePopup(!togglePopup);
+    document.querySelector("body").classList.toggle("bodyNoScroll");
   };
   return (
     <header>
@@ -18,10 +21,11 @@ const Header = () => {
               <img src={`${config.IMG_BASE}/logo.png`} alt='kanban board' />
               <span>kanban board</span>
             </Link>
-            <Button text='New Task' onClickHandler={buttonHandler} />
+            <Button text='New Task' onClickHandler={popupHandler} />
           </div>
         </div>
       </div>
+      {togglePopup && <Popup onPopupHandler={popupHandler} />}
     </header>
   );
 };

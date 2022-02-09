@@ -9,10 +9,8 @@ const App = () => {
       <Header />
       <div className='section__body'>
         <div className='container'>
-          <Home />
           <Routes>
-            <Route exact path='/' component={Home} />
-            {/* <Route path='*' component={NotFound} /> */}
+            <Route path='/' element={<Home />} />
           </Routes>
         </div>
       </div>

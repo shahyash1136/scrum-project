@@ -3,10 +3,10 @@ import Card from "../components/Card/Index";
 
 const Home = () => {
   const [taskType, setTaskType] = useState([
-    { id: 1, name: "To Do" },
-    { id: 2, name: "In Progress" },
-    { id: 3, name: "Code Review" },
-    { id: 4, name: "Done" },
+    { id: 1, name: "to do" },
+    { id: 2, name: "in progress" },
+    { id: 3, name: "code review" },
+    { id: 4, name: "done" },
   ]);
   return (
     <div className='cards__container'>
